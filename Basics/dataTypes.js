@@ -34,3 +34,29 @@ console.log(typeof undefined);
 // (values are changed in the original copy not the copy)
 // typeof of non primitive data types will return object for all of them except function which will return function.
 
+
+// Stack and Heap memory :
+
+// Primitive datatype == stored in stack memory (faster access) and are immutable (cannot be changed once created)
+let myName = "Arshi";
+console.log(myName);
+
+let myName2 = myName;
+myName2 = "Updated";
+
+console.log(myName2);
+console.log(myName); 
+
+
+// Non-primitive datatype == stored in heap memory (slower access) and are mutable (can be changed once created)
+let myObj = {
+    email : "abc@gmail.com",
+    age : 20
+}
+console.log(myObj);
+
+let myObj2 = myObj;
+
+myObj2.email = "abc123@gmail.com"
+console.log(myObj);
+console.log(myObj2);
