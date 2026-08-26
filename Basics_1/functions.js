@@ -113,3 +113,27 @@ function mycreatedArray_2(myCreatedArray){
 return myCreatedArray[4];
 }
  console.log(mycreatedArray_2([1,2,3,4,5]));
+
+
+
+
+// Normal function 
+// let username = function (name){
+//    return `${name} is new user`;
+// }
+// console.log(username("sam"));
+
+//converting normal func to Arrow Functions
+let username = (name) => {
+   return `${name} is new user`;
+}
+console.log(username("sam"));
+
+// arrow function without return keyword
+let name = (name) =>  `${name} is new user`;
+console.log(name("Using function without return keyword"));
+
+//for returning obj need to wrap using ()/return keyword
+let name_obj = () =>  ({user_name : "abc" });
+console.log(name_obj());
+
