@@ -134,14 +134,13 @@ for (let index = 0; index < execution.length; index++) {
 // First failure found at index: 3
 
 
-// ============================================================
-// RULES
-// ============================================================
+// Using continue keyword
 
-// Use:
-// ✓ for loop
-// ✓ if
-// ✓ variables
-// ✓ arrays
-// ✓ console.log()
-// ✓ break (Q4)
+let arr = [1,2,3,4,5,6,7,8,9,10];
+for (let index = 0; index < arr.length; index++) {
+    console.log(arr[index]);
+    if(arr[index] == 5){
+        console.log("This is working");
+        continue
+    }   
+}
