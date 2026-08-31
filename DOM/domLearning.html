@@ -13,7 +13,7 @@
 </head>
 <body class="bg-black">
     <div >
-        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h1  id="title" class="heading">DOM learning <span style="display: none;">test text</span></h1>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
@@ -29,3 +29,86 @@
     </div>
 </body>
 </html>
+
+
+<!--  Used in Console
+
+Accessing element using ID
+document.getElementById('title')
+
+
+it will give me ID
+document.getElementById('title').id
+document.getElementById('title').className 
+
+
+it will give me value of that ID/class
+document.getElementById('title').getAttribute('id')
+
+
+it will set new attribute
+Imp == need to give previous class as well else new class will override previous one
+document.getElementById('title').setAttribute('class','test')
+
+
+const title = document.getElementById('title')
+title // it will also return same h1 heading
+
+
+Using the above variable for setting new styling of element
+title.style.color = 'blue'
+
+
+=== Difference b/w Inner text , textConent , InnerHtml 
+
+title.textContent === it will display hidden text (might be any css property is applied to hide content) as well
+title.innerText   === it will display only visible text
+title.innerHTML   === it will display all text along with html tags.
+
+
+Query Selector
+document.querySelector('h1')  ===> it will give me first selector
+
+
+it will return elements with these values:
+document.querySelector('input[type="password"]')
+document.querySelector('.heading')
+document.querySelector('#title')
+
+
+it will change the color of specific li:
+myul.querySelector('li').style.color = "green" // one method
+
+
+let myul = document.querySelector('ul')  2nd method
+let turngreen = myul.querySelector('li')
+turngreen.style.color = "green"
+turngreen.innerText = "five"     //it will change value 
+
+
+When accessed using querySelectorAll so it will return node list.
+ There direct propeties cannot be applied.
+ let mylist = document.querySelectorAll('li')
+ mylist[0].style.color = 'green'
+
+
+mylist.forEach(function (l) {
+    l.style.backgroundColor = 'green'
+}) 
+
+
+
+queryall selector ===>result node list form 
+getby className ===> Result in form of HTML Collection 
+so it can be converted to Array to apply further functions.
+
+let listitem = document.getElementsByClassName('list-item')
+Array.from(listitem);
+newArr.forEach((li) => {li.style.color = 'orange'})
+
+Example:
+allh2.forEach((h) => {h.style.color = 'red'; 
+                     h.style.backgroundColor = 'green';
+                     h.innerText = "Arshi"})
+
+-->

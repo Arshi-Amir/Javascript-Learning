@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+      // returns div info  we can use getElementbyclassName 
+      //but it will return result in HTML Collection and 
+      //we need to store result and using r[0] it will return div
+       let parentElement =  document.querySelector('.parent');
+       console.log(parentElement);
+
+       //return HTML collection
+       console.log(parentElement.children);
+       
+       //accessing the elements
+       console.log(parentElement.children[0].innerHTML);
+
+       //display all weekdays
+       for (let index = 0 ; index < parentElement.children.length ; index++){
+                     console.log(parentElement.children[index].innerHTML)
+       }
+        
+       //style property
+       parentElement.children[0].style.color = 'orange'
+
+       //get first and last element of list
+       console.log(parentElement.firstElementChild);
+       console.log(parentElement.lastElementChild);
+
+       
+
+</script>
