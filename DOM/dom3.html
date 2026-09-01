@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const mydiv =  document.createElement('div');
+    console.log(mydiv);
+    
+    mydiv.id = Math.round(Math.random() * 10);
+    mydiv.className = 'main';
+    
+    //prefered method
+    mydiv.setAttribute('title','generated title');
+    
+    mydiv.style.backgroundColor = 'orange';
+    
+    //it will bring first reference and then override the previous one. 
+    //mydiv.innerText = 'This is my div';
+
+   // for now above ones are not reflecting on page. 
+   //Because this div is currently present in memory. 
+   //we need to ask document to attach this child to body. 
+   //So that it will be visible on page.
+
+   //2nd method to add text to div
+    const addText = document.createTextNode('This is my new text node');
+    mydiv.appendChild(addText);
+    document.body.appendChild(mydiv);
+
+    
+</script>
+</html>

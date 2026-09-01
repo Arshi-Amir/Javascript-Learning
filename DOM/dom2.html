@@ -25,7 +25,10 @@
        //return HTML collection
        console.log(parentElement.children);
        
-       //accessing the elements
+       //it will give first div
+       console.log(parentElement.children[0])
+
+       //accessing the elements (Actual values)
        console.log(parentElement.children[0].innerHTML);
 
        //display all weekdays
@@ -36,10 +39,20 @@
        //style property
        parentElement.children[0].style.color = 'orange'
 
-       //get first and last element of list
+       //get first and last element of list with div
        console.log(parentElement.firstElementChild);
        console.log(parentElement.lastElementChild);
 
+       //Accessing child to parent. It will give first element of parent
+       const dayOne = document.querySelector('.day')
+       console.log(dayOne)
        
+       //it will give parent
+       console.log(dayOne.parentElement);
 
+       //accessing next sibling element
+       console.log(dayOne.nextElementSibling);
+       
+       //Nodes List : It will give all the nodes including text ,line breaks and comments as well
+       console.log('Nodes : ' , parentElement.childNodes)
 </script>
