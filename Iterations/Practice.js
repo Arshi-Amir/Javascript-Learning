@@ -198,3 +198,190 @@ for (let index = 0; index < numbers10.length; index++) {
 console.log(new_Arr_Multiply);
 
 
+
+
+// ============================================================
+// 🟢 SECTION 2 — STRING BASICS
+// ============================================================
+
+
+// Q11 — REVERSE STRING
+// ------------------------------------------------------------
+
+let text11 = "SDET";
+
+// Reverse the string without using reverse().
+//
+// Expected:
+// "TEDS"
+//Method 1
+console.log("Q11 — REVERSE STRING");
+let reverse_str ="";
+for (let index = text11.length -1 ; index >= 0 ; index -- ) {
+     reverse_str = reverse_str+ text11[index]  
+}
+console.log(reverse_str);
+
+//Method 2
+//Using reverse
+// console.log("Reverse");
+// let reverse_str =  text11.split("").reverse().join("") 
+// console.log(reverse_str );
+
+
+
+// Q12 — COUNT CHARACTERS
+// ------------------------------------------------------------
+
+let text12 = "automation";
+// Count the total number of characters.
+console.log("Q12 — COUNT CHARACTERS");
+console.log( text12.length);
+
+
+
+// Q13 — COUNT VOWELS
+// ------------------------------------------------------------
+
+let text13 = "automation";
+
+// Count how many vowels are present.
+
+// Vowels:
+// a, e, i, o, u
+console.log("Q13 — COUNT VOWELS");
+let count_vowel = 0;
+for (let i = 0; i < text13.length; i++) {
+    if(text13[i] === 'a' || text13[i] === 'e'|| text13[i] === 'i'|| text13[i] === 'o'|| text13[i] === 'u'){
+          count_vowel = count_vowel  + 1;
+    }  
+}
+console.log(`Count how many vowels are present : ${count_vowel}`);
+
+
+
+// Q14 — COUNT CONSONANTS
+// ------------------------------------------------------------
+
+let text14 = "automation";
+
+// Count the number of consonants.
+console.log("Q14 — COUNT CONSONANTS");
+let count_consonant = 0;
+for (let i = 0; i < text14.length; i++) {
+    if(text14[i] === 'a' || text14[i] === 'e'|| text14[i] === 'i'|| text14[i] === 'o'|| text14[i] === 'u'){
+          continue;
+    }  
+    else{
+        count_consonant = count_consonant  + 1;
+    }
+}
+console.log(`Count the number of consonants : ${count_consonant}`);
+
+
+
+// Q15 — FIND CHARACTER
+// ------------------------------------------------------------
+
+let text15 = "JavaScript";
+
+// Find the first occurrence/index of "S".
+console.log("Q15 — FIND CHARACTER");
+console.log(`Find the first occurrence/index of "S" :`,text15.indexOf('S'))
+
+
+
+// Q16 — COUNT CHARACTER
+// ------------------------------------------------------------
+
+let text16 = "javascript";
+
+// Count how many times "a" appears.
+console.log("Q16 — COUNT CHARACTER");
+let count_a = 0;
+for (let i = 0; i < text16.length; i++) {
+       if(text16[i] === 'a'){
+          count_a = count_a + 1;
+       } 
+}
+console.log(`Count how many times "a" appears: `, count_a);
+
+
+
+// Q17 — REMOVE SPACES
+// ------------------------------------------------------------
+let text17 = "SDET Automation Engineer";
+
+// Remove all spaces.
+console.log("Q17 — REMOVE SPACES");
+
+//Method 1
+//console.log(text17.replaceAll(" ",""));
+
+//Method 2
+let remove_space="";
+for (let i = 0; i < text17.length ; i++) {
+     if(text17[i] === " "){
+        continue
+     }
+     else{
+         remove_space = remove_space + text17[i];
+     }   
+}
+console.log(remove_space);
+
+
+
+// Q18 — CHECK PALINDROME
+// ------------------------------------------------------------
+
+let text18 = "madam";
+// Check whether the string is a palindrome.
+console.log("Q18 — CHECK PALINDROME");
+console.log(text18.length);
+
+for (let j = 0; j < text18.length; j++) {    
+     if(text18[j] == text18[(text18.length-1) - j ]){
+        console.log(`value of j : ${text18[j]} and value from last index:  ${ text18[(text18.length-1) - j ]} `);    
+        console.log(true)
+     }  
+}    
+// Expected:
+// true
+
+
+
+// Q19 — COUNT CHARACTERS BEFORE @
+// ------------------------------------------------------------
+
+let email19 = "tester@gmail.com";
+
+// Count how many characters appear before "@".
+console.log("Q19 — COUNT CHARACTERS BEFORE @");
+let count_char = 0;
+for (let i = 0; i < email19.length; i++) {
+       if(email19[i] === '@'){
+          break;
+       } 
+       else{
+        count_char = count_char + 1;
+       }
+}
+console.log(`Count how many characters appear before "@":`, count_char);
+// Expected:
+// 6
+
+
+
+// Q20 — EXTRACT EMAIL DOMAIN
+// ------------------------------------------------------------
+
+let email20 = "tester@gmail.com";
+
+// Extract:
+//
+// gmail.com
+console.log("Q20 — EXTRACT EMAIL DOMAIN");
+let atIndex = email20.indexOf("@");
+
+console.log(email20.slice(atIndex + 1));
